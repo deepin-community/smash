@@ -1,0 +1,49 @@
+smash (0.0.15-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Use secure URI in Vcs control header Vcs-Git.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Use dh-sequence-nodejs auto test & install
+  * Update build
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 08 Nov 2020 22:29:48 +0100
+
+smash (0.0.15-2) unstable; urgency=medium
+
+  * Fix build with NodeJS 0.12.8+ .
+  * Update VCS fields to Salsa.
+  * Update debhelper level to 12 .
+  * Update Standards-Version to 4.5.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 18 Jun 2020 09:29:12 +0200
+
+smash (0.0.15-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release.
+    - fixes build (Closes: #802111)
+  * debian/control: add Vcs-* fields, pointing to pkg-javascript/smash.git
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 01 Nov 2015 12:25:43 -0200
+
+smash (0.0.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards-Version to 3.9.6 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 24 Oct 2014 16:02:09 +0000
+
+smash (0.0.12-1) unstable; urgency=low
+
+  * Initial upload (closes: #733417).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 28 Dec 2013 20:27:46 +0100

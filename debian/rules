@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+UPSTREAM_VERSION := $(shell grep version package.json | cut -d\" -f4)
+PKGDIR := $(CURDIR)/debian/node-smash
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	sed -i -e 's|env node|node|' \
+		-e 's|smash.version|"$(UPSTREAM_VERSION)"|' \
+		$(PKGDIR)/usr/share/nodejs/smash/smash
+
+.PHONY: override_dh_install override_dh_auto_test

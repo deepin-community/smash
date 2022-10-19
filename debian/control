@@ -1,0 +1,27 @@
+Source: smash
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-queue-async <!nocheck>
+ , node-vows <!nocheck>
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/smash
+Vcs-Git: https://salsa.debian.org/js-team/smash.git
+Homepage: https://github.com/mbostock/smash
+Rules-Requires-Root: no
+
+Package: node-smash
+Architecture: all
+Depends: ${misc:Depends}
+ , node-optimist
+ , node-queue-async
+ , nodejs (>= 0.12.8)
+Description: concatenate files together using import statements
+ Concatenates one or more input files, outputting a single merged file.
+ Any import statements in the input files are expanded in-place to the
+ contents of the imported file. If the same file is imported multiple
+ times, only the first instance of the file is included.
